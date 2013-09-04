@@ -81,6 +81,7 @@ public class Head implements ApplicationListener {
 	}
 	
 	public void updateGeneral(){
+		UserInterfaceHandler.update();
 		RenderingHandler.render();
 	}
 

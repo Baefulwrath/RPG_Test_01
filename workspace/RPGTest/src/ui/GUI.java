@@ -2,17 +2,19 @@ package ui;
 
 import head.ProgramState;
 
+import aurelienribon.tweenengine.TweenAccessor;
+
 import com.badlogic.gdx.scenes.scene2d.Stage;
 
 public abstract class GUI extends Stage{
 	
 	public GUIType type = GUIType.MENU;
 	public GUIState state = GUIState.HIDDEN;
-	public ProgramState pState = ProgramState.DEFAULT;
+	public ProgramState programState = ProgramState.DEFAULT;
 	
 	public GUI(GUIType gType, ProgramState progState){
 		type = gType;
-		pState = progState;
+		programState = progState;
 	}
 	
 	public abstract void setup();
