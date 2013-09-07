@@ -1,0 +1,10 @@
+asteroid01.png
+asteroid02.png
+asteroid03.png
+asteroid04.png
+asteroid05.png
+asteroid06.png
+asteroid07.png
+asteroid08.png
+asteroid09.png
+asteroid010.png

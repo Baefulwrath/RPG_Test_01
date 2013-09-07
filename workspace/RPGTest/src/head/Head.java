@@ -5,8 +5,11 @@ import java.util.HashMap;
 import render.RenderingHandler;
 import ui.UserInterfaceHandler;
 
+import assets.AssetHandler;
+
 import com.badlogic.gdx.ApplicationListener;
 
+import game.WorldHandler;
 import head.modes.*;
 import static head.ProgramState.*;
 
@@ -30,6 +33,8 @@ public class Head implements ApplicationListener {
 		UserInterfaceHandler.setup();
 		RenderingHandler.setup();
 		setupModes();
+		AssetHandler.setup();
+		WorldHandler.setup();
 	}
 	
 	public static void setupModes(){
@@ -41,11 +46,15 @@ public class Head implements ApplicationListener {
 	
 	public static void init(){
 		UserInterfaceHandler.init();
+		AssetHandler.init();
+		WorldHandler.init();
 	}
 
 	@Override
 	public void dispose() {
 		RenderingHandler.dispose();
+		AssetHandler.dispose();
+		WorldHandler.dispose();
 	}
 
 	@Override
@@ -76,12 +85,14 @@ public class Head implements ApplicationListener {
 				break;
 			case GAME:
 				modes.get(GAME).update();
+				WorldHandler.update();
 				break;
 		}
 	}
 	
 	public void updateGeneral(){
 		UserInterfaceHandler.update();
+		AssetHandler.update();
 		RenderingHandler.render();
 	}
 

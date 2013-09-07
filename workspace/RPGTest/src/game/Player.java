@@ -1,5 +1,5 @@
 package game;
 
-public class Player extends NPC {
-
+public class Player {
+	
 }

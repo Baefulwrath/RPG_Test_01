@@ -1,0 +1,5 @@
+testship01
+Test Ship 01
+testship01.png
+32
+32
